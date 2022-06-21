@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--核心配置文件的约束信息-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--环境配置-->
+<configuration>
+        <!--加载类路径下的属性文件-->
+        <properties resource ="db.properties"/>
+        <environments default="development">
+            <environment id="development">
+                <transactionManager type="JDBC"/>
+                <dataSource type="POOLED">
+                <!--数据库连接相关配置，db.properties文件中的相关内容-->
+                    <property name="driver" value="${mysql.driver}"/>
+                    <property name="url" value="${mysql.url}"/>
+                    <property name="username" value="${mysql.username}"/>
+                    <property name="password" value="${mysql.password}"/>
+                </dataSource>
+            </environment>
+        </environments>
+    <!--mapper文件路径配置-->
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"/>
+    </mappers>
+</configuration>

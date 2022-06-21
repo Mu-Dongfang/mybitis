@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--指定pom符合哪个版本的描述符-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--组织标识-->
+    <groupId>org.example</groupId>
+    <!--项目名称-->
+    <artifactId>untitled</artifactId>
+    <!--版本号-->
+    <version>1.0-SNAPSHOT</version>
+    <!--属性列表-->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!--一般 jar 包被识别为: groupId:artifactId:version 的形式-->
+    <dependencies>
+        <!--mybatis的核心包-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.10</version>
+        </dependency>
+        <!--mysql的驱动包-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+        </dependency>
+        <!--junit的测试包-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- 将目录下的xml等资源文件编译进classes文件夹  -->
+
+    <!--构建配置-->
+    <build>
+        <!--
+        资源配置
+        资源文件通常不是代码，不需要编译，而是在项目需要捆绑使用的内容
+        -->
+       <resources>
+           <!--
+           资源列表
+           每个资源元素描述与此项目关联的文件以及何处包含文件
+           -->
+           <resource>
+               <!--资源路径-->
+               <directory>src/main/java</directory>
+               <!--一组文件匹配模式，指定目录中要包含的文件，使用*作为通配符-->
+               <includes>
+                   <include>**/*.properties</include>
+                   <include>**/*.xml</include>
+               </includes>
+               <!-- 表示是否要为此资源启用过滤，值为 true 或 false -->
+               <filtering>true</filtering>
+           </resource>
+       </resources>
+   </build>
+</project>
