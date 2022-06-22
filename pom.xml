@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--Ctrl+Shift+/快捷键可以快速添加注释-->
     <!--指定pom符合哪个版本的描述符-->
     <modelVersion>4.0.0</modelVersion>
     <!--组织标识-->
@@ -35,6 +36,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
+            <!--依赖范围-->
             <scope>test</scope>
         </dependency>
     </dependencies>
