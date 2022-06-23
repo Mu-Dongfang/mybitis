@@ -1,31 +1,40 @@
 package com.icey.pojo;
 
 public class User {
-    private int uid;
-    private String uname;
-    private int uage;
+    private int userId;
+    private String userName;
+    private int userAge;
 
-    public int getUid() {
-        return uid;
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userAge=" + userAge +
+                '}';
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public int getUserId() {
+        return userId;
     }
 
-    public String getUname() {
-        return uname;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public String getUserName() {
+        return userName;
     }
 
-    public int getUage() {
-        return uage;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setUage(int uage) {
-        this.uage = uage;
+    public int getUserAge() {
+        return userAge;
+    }
+
+    public void setUserAge(int userAge) {
+        this.userAge = userAge;
     }
 }

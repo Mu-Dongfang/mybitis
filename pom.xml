@@ -25,6 +25,11 @@
             <artifactId>mybatis</artifactId>
             <version>3.5.10</version>
         </dependency>
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.4.1</version>
+        </dependency>
         <!--mysql的驱动包-->
         <dependency>
             <groupId>mysql</groupId>

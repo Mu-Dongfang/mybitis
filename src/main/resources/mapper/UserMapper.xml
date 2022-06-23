@@ -8,8 +8,19 @@ mybatis会依据这个接口动态创建一个实现类去实现这个接口，
 而这个实现类是一个Mapper对象
 -->
 <mapper namespace="com.icey.pojo.User">
-    <select id="findById" parameterType="int"
-            resultType="com.icey.pojo.User">
-        select * from users where uid = #{id}
+    <!--
+        select：查询的声明，用来编写查询语句
+        id：语句的唯一标识
+        parameterType：传递的参数类型，可以省略
+        resultType：配置返回的结果集类型，可以使用别名
+    -->
+    <select id="findById"
+            parameterType="int"
+            resultType="User">
+        select * from users where user_id = #{id}
+    </select>
+    <select id="findTotal"
+            resultType="int">
+        select count(*) from users
     </select>
 </mapper>
